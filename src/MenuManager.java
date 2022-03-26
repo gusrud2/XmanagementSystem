@@ -17,42 +17,56 @@ public class MenuManager {
 		    System.out.print("Select one number between 1-6 : "); 
 		    num = input.nextInt();
 		    
-		    switch (num) {
-		    case 1 :
-		    	System.out.print("Clothes Category: "); // 옷 종류에 대해 입력받도록 출력
-		    	input.nextLine();
-		    	String category = input.nextLine(); 
-		    	System.out.print("Clothes Brand: "); //옷 브랜드에 대해 입력받도록 출력
-		    	String brand = input.nextLine();
-		    	System.out.print("Clothes Color: "); //옷 색깔에 대해 입력받도록 출력
-		    	String color = input.nextLine();
-		    	System.out.print("Clothes Season: "); //봄, 여름, 가을, 겨울 등 입력한 옷에 맞는 계절을 입력하도록 출력
-		    	String season = input.nextLine();
-		    	break;
-		    	
-		    case 2 :
-		    	System.out.print("Clothes Category: "); 
-		    	input.nextLine();
-		    	String category2 = input.nextLine();
-		    	break;
-		    	
-		    case 3 :
-		    	System.out.print("Clothes Category: "); 
-		    	input.nextLine();
-		    	String category3 = input.nextLine();
-		    	break;
-		    	
-		    case 4 :
-		    	System.out.print("Clothes Category: "); 
-		    	input.nextLine();
-		    	String category4 = input.nextLine();
-		    	break;
-		    	
+		   if(num == 1) {
+			   AddClothes();
 		    }
-		    
-		    System.out.println();
+		   else if (num == 2) {
+			   DeleteClothes();
+			}
+		   else if (num == 3) {
+			   EditClothes();
+		   }
+		   else if (num == 4) {
+			   ViewClothes();
+		   }
+		   else {
+			   continue;
+		   }
 		}
-
+		
 	}
-
+	
+	public static void AddClothes() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Clothes Category: ");
+		String category = input.nextLine(); 
+		System.out.print("Clothes Brand: "); 
+		String brand = input.nextLine();
+		System.out.print("Clothes Color: "); 
+		String color = input.nextLine();
+		System.out.print("Clothes Season: "); 
+		String season = input.nextLine();
+		
+	}
+	
+	public static void DeleteClothes() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Clothes Category: ");
+		String category = input.nextLine();
+		
+	}
+	
+	public static void EditClothes() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Clothes Category: ");
+		String category = input.nextLine();
+		
+	}
+	
+	public static void ViewClothes() {
+		Scanner input = new Scanner(System.in);
+		System.out.print("Clothes Category: ");
+		String category = input.nextLine();
+		
+	}
 }
