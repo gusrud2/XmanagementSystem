@@ -16,6 +16,7 @@ public class MenuManager {
 		    System.out.println("3. Edit Clothes");
 		    System.out.println("4. View Clothes");
 		    System.out.println("5. Exit");
+		    System.out.println("**************************************");
 		    System.out.print("Select one number between 1-5: "); 
 		    num = input.nextInt();
 		    
@@ -34,6 +35,8 @@ public class MenuManager {
 		   else {
 			   continue; 
 		   }
+		
+		   System.out.println();
 		}
 		
 	}

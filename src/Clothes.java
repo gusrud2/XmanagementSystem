@@ -23,9 +23,9 @@ public class Clothes {
 	
 	public void printInfo() {
 		System.out.println("category: "+category);
-		System.out.println("brand: "+brand);
-		System.out.println("color: "+color);
-		System.out.println("season: "+season);
+		System.out.println("brand: "+ brand);
+		System.out.println("color: "+ color);
+		System.out.println("season: "+ season);
 	}
 
 }

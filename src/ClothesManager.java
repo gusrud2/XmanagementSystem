@@ -25,13 +25,14 @@ public class ClothesManager {
 	public void DeleteClothes() { //DeleteClothtes함수 정의 
 		System.out.print("Clothes Category: ");
 		String category1 = input.next();
-		if (clothes.category.equals(null)) {
-			System.out.println("the clothes has not been registered");
-			return;
-		}
+		
 		if (clothes.category.equals(category1)) {
 			clothes = null;
 			System.out.println("the clothes is deleted");
+		}
+		else {
+			System.out.println("the clothes has not been registered.");
+			return;
 		}
 		
 	}
