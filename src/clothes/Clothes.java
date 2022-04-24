@@ -3,7 +3,7 @@ package clothes;
 import java.util.Scanner;
 
 public class Clothes {
-	protected ClothesKind kind = ClothesKind.Worker;
+	protected ClothesKind kind = ClothesKind.Adult;
 	protected String category;
 	protected String brand;
 	protected String color;
@@ -12,12 +12,27 @@ public class Clothes {
 	public Clothes() {
 		
 	}
+	public Clothes(String category) {
+		this.category = category;
+	}
 	public Clothes(String category, String brand) {
 		this.category = category;
 		this.brand = brand;
 	}
+	public Clothes(String category, String brand, String color) {
+		this.category = category;
+		this.brand = brand;
+		this.color = color;
+	}
 	
 	public Clothes(String category, String brand, String color, String season) {
+		this.category = category;
+		this.brand = brand;
+		this.color = color;
+		this.season = season;
+	}
+	public Clothes(ClothesKind kind, String category, String brand, String color, String season) {
+		this.kind = kind;
 		this.category = category;
 		this.brand = brand;
 		this.color = color;
