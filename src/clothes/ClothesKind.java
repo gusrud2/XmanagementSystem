@@ -1,6 +1,8 @@
 package clothes;
 
 public enum ClothesKind {
-	Adult,
-	Student,
+	Clothes,
+	Accessory,
+	bag,
+	shoes,
 }

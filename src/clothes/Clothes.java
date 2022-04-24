@@ -3,7 +3,7 @@ package clothes;
 import java.util.Scanner;
 
 public class Clothes {
-	protected ClothesKind kind = ClothesKind.Adult;
+	protected ClothesKind kind = ClothesKind.Clothes;
 	protected String category;
 	protected String brand;
 	protected String color;
@@ -72,10 +72,10 @@ public class Clothes {
 	
 	
 	public void printInfo() {
-		System.out.println("category: "+category);
-		System.out.println("brand: "+ brand);
-		System.out.println("color: "+ color);
-		System.out.println("season: "+ season);
+		System.out.print("category: "+category);
+		System.out.print(" brand: "+ brand);
+		System.out.print(" color: "+ color);
+		System.out.print(" season: "+ season);
 	}
 	
 	public void getUserInput(Scanner input) {

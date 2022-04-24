@@ -3,7 +3,9 @@ import java.util.Scanner;
 
 import clothes.Clothes;
 import clothes.ClothesKind;
-import clothes.StudentClothes;
+import clothes.Accessory;
+import clothes.Bag;
+import clothes.Shoes;
 
 public class ClothesManager {
 	ArrayList<Clothes> cloth = new ArrayList<Clothes>();
@@ -17,10 +19,12 @@ public class ClothesManager {
 	public void AddClothes() { //AddClothes함수 정의
 		int kind = 0;
 		Clothes clothes;
-		while (kind != 1 && kind != 2) {
-			System.out.print("1 for Adult ");
-			System.out.println("2 for Student ");
-			System.out.print("Select num for Clothes Kind between 1 and 2: ");
+		while (kind != 1 && kind != 2 && kind != 3 && kind != 4) {
+			System.out.print("1 for Clothes, ");
+			System.out.print("2 for Accessory, ");
+			System.out.print("3 for Bag, ");
+			System.out.println("4 for Shoes ");
+			System.out.print("Select num for Clothes Kind between 1-4: ");
 			kind = input.nextInt(); 
 			
 			if (kind == 1) {
@@ -30,13 +34,25 @@ public class ClothesManager {
 				break;
 			}
 			else if (kind == 2) {
-				clothes = new StudentClothes();
+				clothes = new Accessory();
+				clothes.getUserInput(input);
+				cloth.add(clothes);
+				break;
+			}
+			else if (kind == 3) {
+				clothes = new Bag();
+				clothes.getUserInput(input);
+				cloth.add(clothes);
+				break;
+			}
+			else if (kind == 4) {
+				clothes = new Shoes();
 				clothes.getUserInput(input);
 				cloth.add(clothes);
 				break;
 			}
 			else {
-				System.out.print("Select num for Clothes Kind between 1 and 2: ");				
+				System.out.print("Select num for Clothes Kind between 1-4: ");				
 			}
 			
 		}
@@ -70,20 +86,23 @@ public class ClothesManager {
 	}
 	
 	public void EditClothes() { //EditClothes함수 정의
-		System.out.print("Clothes Category: ");
+		System.out.print("Category를 입력하세요: ");
 		String category1 = input.next();
 		for (int i=0; i<cloth.size(); i++) {
 			Clothes clothes = cloth.get(i);
 			if (cloth.get(i).getCategory().equals(category1)) {
 				int num = -1;
 				while (num != 5) {
-					System.out.println("-------------------");
+					cloth.get(i).printInfo();
+					System.out.println();
+					System.out.println("---------------------");
 					System.out.println("1. Edit Category");
 				    System.out.println("2. Edit Brand");
 				    System.out.println("3. Edit Color");
 				    System.out.println("4. Edit Season");
-				    System.out.println("4. Exit");
-				    System.out.println("-------------------");
+				    System.out.println("5. Edit Size(shoes)");
+				    System.out.println("6. Exit");
+				    System.out.println("---------------------");
 				    System.out.print("수정할 항목을 선택하세요: "); 
 				    num = input.nextInt();
 				    if (num == 1) {
@@ -106,11 +125,15 @@ public class ClothesManager {
 				    	String brand = input.next();
 				    	clothes.setSeason(brand);
 				    }
+				    else if (num == 5) {
+				    	System.out.print("수정할 size: ");
+				    	String size = input.next();
+				    	clothes.setSeason(size);
+				    }
 				    else {
-				    	continue;
+				    	break;
 				    }
 				}
-				break;
 			}
 		}
 		
@@ -121,6 +144,7 @@ public class ClothesManager {
 //		String category1 = input.next();
 		for (int i=0; i<cloth.size(); i++) {
 			cloth.get(i).printInfo();
+			System.out.println();
 		}
 		
 	}

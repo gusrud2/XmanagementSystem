@@ -2,21 +2,21 @@ package clothes;
 
 import java.util.Scanner;
 
-public class StudentClothes extends Clothes {
+public class Accessory extends Clothes {
 	
 	public void getUserInput(Scanner input) {
 		
-		System.out.print("Clothes Category: "); 
+		System.out.print("Accessory Category: "); 
 		String category = input.next(); 
 		this.setCategory(category);
 		
 		char answer = 'x';
 		
-		while(answer != 'y' && answer != 'Y' && answer == 'n' && answer == 'N') {
-			System.out.print("Is there a brand for clothes? (Y/N): ");
+		for(;;) {
+			System.out.print("Is there a brand for Accessory? (Y/N): ");
 			answer = input.next().charAt(0);
 			if (answer == 'y' || answer == 'Y') {
-				System.out.print("Clothes Brand: "); 
+				System.out.print("Accessory Brand: "); 
 				String brand = input.next();
 				this.setBrand(brand);
 				break;
@@ -29,13 +29,11 @@ public class StudentClothes extends Clothes {
 			}
 		}
 		
-		System.out.print("Clothes Color: "); 
+		System.out.print("Accessory Color: "); 
 		String color = input.next();
 		this.setColor(color);
 		
-		System.out.print("Clothes Season: "); 
-		String season = input.next();
-		this.setSeason(season);
+	
 	}
 	
 	
