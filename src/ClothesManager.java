@@ -88,8 +88,10 @@ public class ClothesManager {
 	public void EditClothes() { //EditClothes함수 정의
 		System.out.print("Category를 입력하세요: ");
 		String category1 = input.next();
+		
 		for (int i=0; i<cloth.size(); i++) {
 			Clothes clothes = cloth.get(i);
+			
 			if (cloth.get(i).getCategory().equals(category1)) {
 				int num = -1;
 				while (num != 5) {
