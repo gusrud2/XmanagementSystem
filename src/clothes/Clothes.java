@@ -12,6 +12,7 @@ public class Clothes {
 	public Clothes() {
 		
 	}
+	
 	public Clothes(String category) {
 		this.category = category;
 	}

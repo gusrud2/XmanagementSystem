@@ -78,6 +78,7 @@ public class ClothesManager {
 			cloth.remove(index);
 			System.out.println("the clothes"+ category1 +" is deledted");
 		}
+		
 		else {
 			System.out.println("the clothes has not been registered.");
 			return;

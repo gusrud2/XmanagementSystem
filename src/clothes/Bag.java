@@ -20,4 +20,5 @@ public class Bag extends Clothes {
 		
 	}
 
+	
 }

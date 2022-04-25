@@ -34,6 +34,5 @@ public class Accessory extends Clothes {
 		this.setColor(color);
 	
 	}
-	
 
 }
