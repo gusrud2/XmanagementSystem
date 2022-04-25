@@ -133,8 +133,11 @@ public class ClothesManager {
 				    else {
 				    	break;
 				    }
+				    
 				}
+				
 			}
+			
 		}
 		
 	}

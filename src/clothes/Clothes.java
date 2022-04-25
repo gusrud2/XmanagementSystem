@@ -77,7 +77,6 @@ public class Clothes {
 		this.size = size;
 	}
 	
-	
 	public void printInfo() {
 		if (season == null) {
 			System.out.print("category: "+category);
