@@ -4,13 +4,7 @@ import java.util.Scanner;
 
 public class Shoes extends Clothes {
 	
-	private String size;
-	public Shoes () {
-		this.category = category;
-		this.brand = brand;
-		this.color = color;
-		this.size = size;
-	}
+	protected int size;
 	
 	public void getUserInput(Scanner input) {
 		
@@ -27,17 +21,10 @@ public class Shoes extends Clothes {
 		this.setColor(color);
 		
 		System.out.print("Shoes Size: "); 
-		String size = input.next();
+		int size = input.nextInt();
 		this.setSize(size);
 		
 	}
 
-
-	public String getSize() {
-		return size;
-	}
-	public void setSize(String size) {
-		this.size = size;
-	}
 
 }

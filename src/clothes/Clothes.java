@@ -31,12 +31,13 @@ public class Clothes {
 		this.color = color;
 		this.season = season;
 	}
-	public Clothes(ClothesKind kind, String category, String brand, String color, String season) {
-		this.kind = kind;
+	
+	protected int size;
+	public Clothes(String category, String brand, String color, int size) {
 		this.category = category;
 		this.brand = brand;
 		this.color = color;
-		this.season = season;
+		this.size = size;
 	}
 	
 	public void setKind(ClothesKind kind) {
@@ -69,13 +70,30 @@ public class Clothes {
 	public ClothesKind getKind() {
 		return kind;
 	}
+	public int getSize() {
+		return size;
+	}
+	public void setSize(int size) {
+		this.size = size;
+	}
 	
 	
 	public void printInfo() {
-		System.out.print("category: "+category);
-		System.out.print(" brand: "+ brand);
-		System.out.print(" color: "+ color);
-		System.out.print(" season: "+ season);
+		if (season == null) {
+			System.out.print("category: "+category);
+			System.out.print(" brand: "+ brand);
+			System.out.print(" color: "+ color);
+		}
+		else {
+			System.out.print("category: "+category);
+			System.out.print(" brand: "+ brand);
+			System.out.print(" color: "+ color);
+			System.out.print(" season: "+ season);
+		}
+		if (size >0 ) {
+			System.out.print(" size: "+ size);
+		}
+		
 	}
 	
 	public void getUserInput(Scanner input) {

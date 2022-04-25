@@ -1,5 +1,4 @@
 package clothes;
-
 import java.util.Scanner;
 
 public class Bag extends Clothes {

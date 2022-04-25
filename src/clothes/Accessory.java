@@ -32,7 +32,6 @@ public class Accessory extends Clothes {
 		System.out.print("Accessory Color: "); 
 		String color = input.next();
 		this.setColor(color);
-		
 	
 	}
 	

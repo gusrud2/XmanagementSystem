@@ -140,8 +140,6 @@ public class ClothesManager {
 	}
 	
 	public void ViewClothes() { //ViewClothes함수 정의
-//		System.out.print("Clothes Category: ");
-//		String category1 = input.next();
 		for (int i=0; i<cloth.size(); i++) {
 			cloth.get(i).printInfo();
 			System.out.println();

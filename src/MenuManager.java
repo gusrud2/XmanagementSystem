@@ -10,7 +10,7 @@ public class MenuManager {
 		int num = 0;
 		
 		
-		while(num != 6) {
+		while(num != 5) {
 			System.out.println("*** Clothes Management System Menu ***");
 			System.out.println("1. Add Clothes");
 		    System.out.println("2. Delete Clothes");
