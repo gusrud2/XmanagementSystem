@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class Bag extends Clothes {
 	
+	public Bag(ClothesKind kind) {
+		super(kind);
+	}
+	
 	public void getUserInput(Scanner input) {
 		
 		System.out.print("Bag Category: "); 

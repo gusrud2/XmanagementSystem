@@ -19,16 +19,16 @@ public class MenuManager {
 		    System.out.print("Select one number between 1-5: "); 
 		    num = input.nextInt();
 		    
-		   if(num == 1) { //1일때
+		   if(num == 1) { 
 			   ClothesManager.AddClothes(); //AddClothes 함수로 이동
 		    }
-		   else if (num == 2) { //2일때
+		   else if (num == 2) { 
 			   ClothesManager.DeleteClothes(); //DeleteClothtes 함수로 이동
 			}
-		   else if (num == 3) { //3일때
+		   else if (num == 3) { 
 			   ClothesManager.EditClothes(); //EditClothes 함수로 이동
 		   }
-		   else if (num == 4) { //4일때
+		   else if (num == 4) { 
 			   ClothesManager.ViewClothes(); //ViewClothes 함수로 이동
 		   }
 		   else {

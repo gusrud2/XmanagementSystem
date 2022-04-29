@@ -4,7 +4,11 @@ import java.util.Scanner;
 
 public class Shoes extends Clothes {
 	
-	protected int size;
+    protected int size;
+	
+	public Shoes(ClothesKind kind) {
+		super(kind);
+	}
 	
 	public void getUserInput(Scanner input) {
 		
@@ -25,6 +29,6 @@ public class Shoes extends Clothes {
 		this.setSize(size);
 		
 	}
-
 	
+
 }

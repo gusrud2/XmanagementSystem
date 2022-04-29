@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class Accessory extends Clothes {
 	
+	public Accessory(ClothesKind kind) {
+		super(kind);
+	}
+	
 	public void getUserInput(Scanner input) {
 		
 		System.out.print("Accessory Category: "); 
@@ -32,6 +36,10 @@ public class Accessory extends Clothes {
 		System.out.print("Accessory Color: "); 
 		String color = input.next();
 		this.setColor(color);
+		
+		System.out.print("Accessory Season: "); 
+		String season = input.next();
+		this.setSeason(season);
 	
 	}
 

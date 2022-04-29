@@ -4,7 +4,7 @@ public enum ClothesKind {
 	
 	Clothes,
 	Accessory,
-	bag,
-	shoes,
+	Bag,
+	Shoes,
 	
 }

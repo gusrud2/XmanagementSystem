@@ -10,35 +10,38 @@ public class Clothes {
 	protected String season;
 	
 	public Clothes() {
-		
 	}
 	
+	public Clothes(ClothesKind kind) {
+		this.kind = kind;
+	}
 	public Clothes(String category) {
 		this.category = category;
-	}
-	public Clothes(String category, String brand) {
-		this.category = category;
-		this.brand = brand;
 	}
 	public Clothes(String category, String brand, String color) {
 		this.category = category;
 		this.brand = brand;
 		this.color = color;
 	}
-	
 	public Clothes(String category, String brand, String color, String season) {
 		this.category = category;
 		this.brand = brand;
 		this.color = color;
 		this.season = season;
 	}
-	
 	protected int size;
 	public Clothes(String category, String brand, String color, int size) {
 		this.category = category;
 		this.brand = brand;
 		this.color = color;
 		this.size = size;
+	}
+	public Clothes(ClothesKind kind, String category, String brand, String color, String season) {
+		this.kind = kind;
+		this.category = category;
+		this.brand = brand;
+		this.color = color;
+		this.season = season;
 	}
 	
 	public void setKind(ClothesKind kind) {
@@ -78,38 +81,60 @@ public class Clothes {
 		this.size = size;
 	}
 	
+
 	public void printInfo() {
+		String skind = "none";
+		switch(this.kind) {
+		case Clothes:
+			skind = "Clothes,";
+			break;
+		case Accessory:
+			skind = "Accessory,";
+			break;
+		case Bag:
+			skind = "Bag,";
+			break;
+		case Shoes:
+			skind = "Shoes,";
+			break;
+		default:
+			break;
+		
+		}
+		
+		System.out.print("kind: "+skind);	
 		if (season == null) {
-			System.out.print("category: "+category);
+			System.out.print(" category: "+category);
 			System.out.print(" brand: "+ brand);
 			System.out.print(" color: "+ color);
 		}
 		else {
-			System.out.print("category: "+category);
+			System.out.print(" category: "+category);
 			System.out.print(" brand: "+ brand);
 			System.out.print(" color: "+ color);
 			System.out.print(" season: "+ season);
 		}
-		if (size >0 ) {
+		
+		if (size > 0) {
 			System.out.print(" size: "+ size);
 		}
-		
+
 	}
 	
 	public void getUserInput(Scanner input) {
-		System.out.print("Clothes Category: "); //옷 종류 입력
+		System.out.print("Clothes Category: "); 
 		String category = input.next(); 
 		this.setCategory(category);
 		
-		System.out.print("Clothes Brand: "); //옷 브랜드 입력
+		System.out.print("Clothes Brand: "); 
 		String brand = input.next();
 		this.setBrand(brand);
 		
-		System.out.print("Clothes Color: "); //옷 색깔 입력
+		System.out.print("Clothes Color: "); 
 		String color = input.next();
 		this.setColor(color);
 		
-		System.out.print("Clothes Season: "); //옷의 계절을 입력
+		System.out.print("Clothes Season: "); 
 		String season = input.next();
 		this.setSeason(season);
 	}

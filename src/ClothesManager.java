@@ -20,33 +20,35 @@ public class ClothesManager {
 		int kind = 0;
 		Clothes clothes;
 		while (kind != 1 && kind != 2 && kind != 3 && kind != 4) {
-			System.out.print("1 for Clothes, ");
-			System.out.print("2 for Accessory, ");
-			System.out.print("3 for Bag, ");
-			System.out.println("4 for Shoes ");
+			System.out.println("------------");
+			System.out.println("1 Clothes ");
+			System.out.println("2 Accessory");
+			System.out.println("3 Bag");
+			System.out.println("4 Shoes ");
+			System.out.println("------------");
 			System.out.print("Select num for Clothes Kind between 1-4: ");
 			kind = input.nextInt(); 
 			
 			if (kind == 1) {
-				clothes = new Clothes();
+				clothes = new Clothes(ClothesKind.Clothes);
 				clothes.getUserInput(input);
 				cloth.add(clothes);
 				break;
 			}
 			else if (kind == 2) {
-				clothes = new Accessory();
+				clothes = new Accessory(ClothesKind.Accessory);
 				clothes.getUserInput(input);
 				cloth.add(clothes);
 				break;
 			}
 			else if (kind == 3) {
-				clothes = new Bag();
+				clothes = new Bag(ClothesKind.Bag);
 				clothes.getUserInput(input);
 				cloth.add(clothes);
 				break;
 			}
 			else if (kind == 4) {
-				clothes = new Shoes();
+				clothes = new Shoes(ClothesKind.Shoes);
 				clothes.getUserInput(input);
 				cloth.add(clothes);
 				break;
@@ -76,7 +78,7 @@ public class ClothesManager {
 		
 		if (index >= 0) {
 			cloth.remove(index);
-			System.out.println("the clothes"+ category1 +" is deledted");
+			System.out.println("the clothes "+ category1 +" is deledted");
 		}
 		
 		else {
@@ -95,7 +97,7 @@ public class ClothesManager {
 			
 			if (cloth.get(i).getCategory().equals(category1)) {
 				int num = -1;
-				while (num != 5) {
+				while (num != 6) {
 					cloth.get(i).printInfo();
 					System.out.println();
 					System.out.println("---------------------");
@@ -120,23 +122,22 @@ public class ClothesManager {
 				    }
 				    else if (num == 3) {
 				    	System.out.print("수정할 color: ");
-				    	String brand = input.next();
-				    	clothes.setColor(brand);
+				    	String color = input.next();
+				    	clothes.setColor(color);
 				    }
 				    else if (num == 4) {
 				    	System.out.print("수정할 season: ");
-				    	String brand = input.next();
-				    	clothes.setSeason(brand);
+				    	String season = input.next();
+				    	clothes.setSeason(season);
 				    }
 				    else if (num == 5) {
 				    	System.out.print("수정할 size: ");
-				    	String size = input.next();
-				    	clothes.setSeason(size);
+				    	int size = input.nextInt();
+				    	clothes.setSize(size);
 				    }
 				    else {
 				    	break;
-				    }
-				    
+				    }				    
 				}
 				
 			}
