@@ -2,7 +2,9 @@ package clothes;
 
 import java.util.Scanner;
 
-public class Clothes {
+import Exception.SizeExcetption;
+
+public abstract class Clothes implements ClothesInput {
 	protected ClothesKind kind = ClothesKind.Clothes;
 	protected String category;
 	protected String brand;
@@ -77,12 +79,55 @@ public class Clothes {
 	public int getSize() {
 		return size;
 	}
-	public void setSize(int size) {
+	public void setSize(int size) throws SizeExcetption{
+		if(size>300) {
+			throw new SizeExcetption();
+		}
 		this.size = size;
 	}
 	
-
-	public void printInfo() {
+	public abstract void printInfo();
+	
+	public void setClothesCategory(Scanner input) {
+		System.out.print("category: ");
+    	String category = input.next();
+    	this.setCategory(category);
+	}
+	
+	public void setClothesBrand(Scanner input) {
+		System.out.print("brand: ");
+    	String brand = input.next();
+    	this.setBrand(brand);
+	}
+	
+	public void setClothesColor(Scanner input) {
+		System.out.print("color: ");
+    	String color = input.next();
+    	this.setColor(color);
+	}
+	
+	public void setClothesSeason(Scanner input) {
+		System.out.print("season: ");
+    	String season = input.next();
+    	this.setSeason(season);
+	}
+	
+	public void setClothesSize(Scanner input) {
+		int size = 301;
+		while(size > 300) {
+			System.out.print("size: ");
+			size = input.nextInt();
+			try {
+				this.setSize(size);
+			} 
+			catch (SizeExcetption e ) {
+				System.out.println("Incorrect Size(0-300)!!");
+			}
+		}
+    	
+	}
+	
+	public String getKindString() {
 		String skind = "none";
 		switch(this.kind) {
 		case Clothes:
@@ -98,45 +143,9 @@ public class Clothes {
 			skind = "Shoes,";
 			break;
 		default:
-			break;
+		}
+		return skind;
 		
-		}
-		
-		System.out.print("kind: "+skind);	
-		if (season == null) {
-			System.out.print(" category: "+category);
-			System.out.print(" brand: "+ brand);
-			System.out.print(" color: "+ color);
-		}
-		else {
-			System.out.print(" category: "+category);
-			System.out.print(" brand: "+ brand);
-			System.out.print(" color: "+ color);
-			System.out.print(" season: "+ season);
-		}
-		
-		if (size > 0) {
-			System.out.print(" size: "+ size);
-		}
-
 	}
 	
-	public void getUserInput(Scanner input) {
-		System.out.print("Clothes Category: "); 
-		String category = input.next(); 
-		this.setCategory(category);
-		
-		System.out.print("Clothes Brand: "); 
-		String brand = input.next();
-		this.setBrand(brand);
-		
-		System.out.print("Clothes Color: "); 
-		String color = input.next();
-		this.setColor(color);
-		
-		System.out.print("Clothes Season: "); 
-		String season = input.next();
-		this.setSeason(season);
-	}
-
 }

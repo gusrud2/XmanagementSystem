@@ -10,19 +10,21 @@ public class Accessory extends Clothes {
 	
 	public void getUserInput(Scanner input) {
 		
-		System.out.print("Accessory Category: "); 
-		String category = input.next(); 
-		this.setCategory(category);
-		
+		System.out.print("Accessory "); 
+		setClothesCategory(input);
+		System.out.print("Accessory "); 
+		setClothesBrandwithYN(input);
+		System.out.print("Accessory "); 
+		setClothesColor(input);
+	}
+	
+	public void setClothesBrandwithYN(Scanner input) {
 		char answer = 'x';
-		
 		for(;;) {
 			System.out.print("Is there a brand for Accessory? (Y/N): ");
 			answer = input.next().charAt(0);
 			if (answer == 'y' || answer == 'Y') {
-				System.out.print("Accessory Brand: "); 
-				String brand = input.next();
-				this.setBrand(brand);
+				setClothesBrand(input);
 				break;
 			}
 			else if (answer == 'n' || answer == 'N') {
@@ -32,15 +34,28 @@ public class Accessory extends Clothes {
 			else {
 			}
 		}
-		
-		System.out.print("Accessory Color: "); 
-		String color = input.next();
-		this.setColor(color);
-		
-		System.out.print("Accessory Season: "); 
-		String season = input.next();
-		this.setSeason(season);
+	}
 	
+	public void printInfo() {
+		String skind = getKindString();
+		
+		System.out.print("kind: "+skind);	
+		if (season == null) {
+			System.out.print(" category: "+category);
+			System.out.print(" brand: "+ brand);
+			System.out.print(" color: "+ color);
+		}
+		else {
+			System.out.print(" category: "+category);
+			System.out.print(" brand: "+ brand);
+			System.out.print(" color: "+ color);
+			System.out.print(" season: "+ season);
+		}
+		
+		if (size > 0) {
+			System.out.print(" size: "+ size);
+		}
+
 	}
 
 }

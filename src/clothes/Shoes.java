@@ -4,30 +4,42 @@ import java.util.Scanner;
 
 public class Shoes extends Clothes {
 	
-    protected int size;
-	
 	public Shoes(ClothesKind kind) {
 		super(kind);
 	}
 	
 	public void getUserInput(Scanner input) {
 		
-		System.out.print("Shoes Category: "); 
-		String category = input.next(); 
-		this.setCategory(category);
+		System.out.print("Shoes ");
+		setClothesCategory(input);
+		System.out.print("Shoes ");
+		setClothesBrand(input);
+		System.out.print("Shoes ");
+		setClothesColor(input);
+		System.out.print("Shoes ");
+		setClothesSize(input);
+				
+	}
+	public void printInfo() {
+		String skind = getKindString();
 		
-		System.out.print("Shoes Brand: "); 
-		String brand = input.next(); 
-		this.setBrand(brand);
+		System.out.print("kind: "+skind);	
+		if (season == null) {
+			System.out.print(" category: "+category);
+			System.out.print(" brand: "+ brand);
+			System.out.print(" color: "+ color);
+		}
+		else {
+			System.out.print(" category: "+category);
+			System.out.print(" brand: "+ brand);
+			System.out.print(" color: "+ color);
+			System.out.print(" season: "+ season);
+		}
 		
-		System.out.print("Shoes Color: "); 
-		String color = input.next();
-		this.setColor(color);
-		
-		System.out.print("Shoes Size: "); 
-		int size = input.nextInt();
-		this.setSize(size);
-		
+		if (size > 0) {
+			System.out.print(" size: "+ size);
+		}
+
 	}
 	
 

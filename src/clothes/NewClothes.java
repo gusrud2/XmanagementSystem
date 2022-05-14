@@ -2,25 +2,23 @@ package clothes;
 
 import java.util.Scanner;
 
-public class Bag extends Clothes {
+public class NewClothes extends Clothes {
 	
-	public Bag(ClothesKind kind) {
+	public NewClothes(ClothesKind kind) {
 		super(kind);
 	}
 	
 	public void getUserInput(Scanner input) {
-		
-		System.out.print("Bag "); 
+		System.out.print("Clothes ");
 		setClothesCategory(input);
-		
-		System.out.print("Bag "); 
+		System.out.print("Clothes ");
 		setClothesBrand(input);
-		
-		System.out.print("Bag "); 
+		System.out.print("Clothes ");
 		setClothesColor(input);
-		
-		
+		System.out.print("Clothes ");
+		setClothesSeason(input);	
 	}
+	
 	public void printInfo() {
 		String skind = getKindString();
 		
@@ -43,5 +41,4 @@ public class Bag extends Clothes {
 
 	}
 
-	
 }
