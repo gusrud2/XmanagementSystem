@@ -31,5 +31,4 @@ public interface ClothesInput {
 	public void setClothesSeason(Scanner input);
 	
 	public void setClothesSize(Scanner input);
-
 }

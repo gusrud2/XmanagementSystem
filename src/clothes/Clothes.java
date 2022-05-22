@@ -1,10 +1,16 @@
 package clothes;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 import Exception.SizeExcetption;
 
-public abstract class Clothes implements ClothesInput {
+public abstract class Clothes implements ClothesInput, Serializable {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -8134865206522167233L;
+	
 	protected ClothesKind kind = ClothesKind.Clothes;
 	protected String category;
 	protected String brand;

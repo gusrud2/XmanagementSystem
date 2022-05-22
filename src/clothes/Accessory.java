@@ -32,6 +32,7 @@ public class Accessory extends Clothes {
 				break;
 			}
 			else {
+				
 			}
 		}
 	}

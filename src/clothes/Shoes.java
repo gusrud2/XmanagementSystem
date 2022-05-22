@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Shoes extends Clothes {
 	
 	public Shoes(ClothesKind kind) {
+		
 		super(kind);
 	}
 	

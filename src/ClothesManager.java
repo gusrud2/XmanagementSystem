@@ -1,3 +1,4 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -10,9 +11,15 @@ import clothes.Accessory;
 import clothes.Bag;
 import clothes.Shoes;
 
-public class ClothesManager {
+public class ClothesManager implements Serializable {
+	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6418587571774776437L;
+	
 	ArrayList<ClothesInput> cloth = new ArrayList<ClothesInput>();
-	Scanner input;
+	transient Scanner input;
 	
 	ClothesManager(Scanner input){
 		this.input = input;
@@ -25,10 +32,10 @@ public class ClothesManager {
 		while (kind < 1 || kind > 4) {
 			try {
 				System.out.println("------------");
-				System.out.println("1 Clothes ");
-				System.out.println("2 Accessory");
-				System.out.println("3 Bag");
-				System.out.println("4 Shoes ");
+				System.out.println("1 Clothes   ");
+				System.out.println("2 Accessory ");
+				System.out.println("3 Bag       ");
+				System.out.println("4 Shoes     ");
 				System.out.println("------------");
 				System.out.print("Select num for Clothes Kind between 1-4: ");
 				kind = input.nextInt(); 
@@ -149,6 +156,7 @@ public class ClothesManager {
 			System.out.println();
 		}
 		
+		System.out.println();
 	}
 	
 	public void showEditMenu() {

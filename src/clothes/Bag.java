@@ -19,7 +19,6 @@ public class Bag extends Clothes {
 		System.out.print("Bag "); 
 		setClothesColor(input);
 		
-		
 	}
 	public void printInfo() {
 		String skind = getKindString();
