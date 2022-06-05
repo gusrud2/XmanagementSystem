@@ -1,7 +1,6 @@
 package clothes;
 
 import java.util.Scanner;
-
 public class Accessory extends Clothes {
 	
 	public Accessory(ClothesKind kind) {

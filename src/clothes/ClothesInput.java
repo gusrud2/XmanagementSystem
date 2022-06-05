@@ -10,9 +10,15 @@ public interface ClothesInput {
 	
 	public void setCategory(String category);
 	
+	public String getBrand();
+	
 	public void setBrand(String brand);
 	
+	public String getColor();
+	
 	public void setColor(String color);
+	
+	public String getSeason();
 	
 	public void setSeason(String season);
 	
