@@ -13,6 +13,37 @@ import manager.ClothesManager;
 
 public class ClothesViewer extends JPanel {
 
+	public ClothesManager getClothesManager() {
+		return ClothesManager;
+	}
+
+	public void setClothesManager(ClothesManager clothesManager) {
+		ClothesManager = clothesManager;
+		this.removeAll();
+		
+		DefaultTableModel model = new DefaultTableModel();
+		model.addColumn("Category");
+		model.addColumn("Brand");
+		model.addColumn("Color");
+		model.addColumn("Season");
+		
+		for (int i=0; i<ClothesManager.size(); i++) {
+			Vector row = new Vector();
+			ClothesInput ci = ClothesManager.get(i);
+			row.add(ci.getCategory());
+			row.add(ci.getBrand());
+			row.add(ci.getColor());
+			row.add(ci.getSeason());
+			model.addRow(row);
+		}
+		
+			
+		JTable table = new JTable(model);
+		JScrollPane sp = new JScrollPane(table);
+		
+		this.add(sp);
+	}
+
 	WindowFrame frame;
 	
 	ClothesManager ClothesManager;
@@ -45,7 +76,6 @@ public class ClothesViewer extends JPanel {
 		JScrollPane sp = new JScrollPane(table);
 		
 		this.add(sp);
-		
 	}
 
 }

@@ -8,7 +8,6 @@ import java.util.logging.SimpleFormatter;
 import java.util.logging.FileHandler;
 import java.util.logging.LogManager;
 
-
 public class EventLogger {
 	
 	FileHandler filehandler;

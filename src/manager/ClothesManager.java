@@ -28,6 +28,17 @@ public class ClothesManager implements Serializable {
 		
 	}
 	
+	public void AddClothes(String category, String brand, String color, String season ) {
+		ClothesInput clothesInput = new NewClothes(ClothesKind.Clothes);
+		clothesInput.getUserInput(input);
+		cloth.add(clothesInput);
+	}
+	
+	public void AddClothes(ClothesInput clothesInput) {
+		cloth.add(clothesInput);
+	}
+	
+	
 	public void AddClothes() { //AddClothes함수 정의
 		int kind = 0;
 		ClothesInput clothesInput;

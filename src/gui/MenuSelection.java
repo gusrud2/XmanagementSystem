@@ -11,6 +11,7 @@ import listener.ButtonAddListener;
 import listener.ButtonViewListener;
 
 public class MenuSelection extends JPanel{
+	
 	WindowFrame frame;
 	
 	public MenuSelection(WindowFrame frame) {

@@ -24,6 +24,7 @@ public interface ClothesInput {
 	
 	public void setSize(int size) throws SizeExcetption;
 	
+	
 	public void getUserInput(Scanner input);
 	
 	public void printInfo();

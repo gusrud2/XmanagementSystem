@@ -10,18 +10,19 @@ import gui.ClothesViewer;
 import gui.WindowFrame;
 
 
-public class ButtonAddListener implements ActionListener {
+public class ClothesAdderCancelListener implements ActionListener {
 	
 	WindowFrame frame;
 
-	public ButtonAddListener(WindowFrame frame) {
+	public ClothesAdderCancelListener(WindowFrame frame) {
 		this.frame = frame;
 	}
 
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		frame.getContentPane().removeAll();
-		frame.getContentPane().add(frame.getClothesadder());
+		frame.getContentPane().add(frame.getMenuselection());
 		frame.revalidate();
 		frame.repaint();
 

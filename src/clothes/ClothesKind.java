@@ -1,4 +1,5 @@
 package clothes;
+
 public enum ClothesKind {
 	
 	Clothes,

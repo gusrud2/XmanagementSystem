@@ -21,7 +21,7 @@ public class WindowFrame extends JFrame{
 		
 		this.ClothesManager = ClothesManager;
 		menuselection = new MenuSelection(this);
-		clothesadder = new ClothesAdder(this);
+		clothesadder = new ClothesAdder(this, this.ClothesManager);
 		clothesViewer = new ClothesViewer(this, this.ClothesManager);
 				
 		this.add(menuselection);
