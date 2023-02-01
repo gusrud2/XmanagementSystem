@@ -5,6 +5,21 @@ import java.util.Scanner;
 
 import Exception.SizeExcetption;
 
+
+public class HBD{
+    public static void main(string[] args){
+        String name = "장배지우";
+        int birthday = 0122;
+
+        if (current_day == 0203){
+            System.out.println(name+"의 생일을 축하합니다!♥")
+        }
+    }
+}
+
+
+
+
 public abstract class Clothes implements ClothesInput, Serializable {
 	/**
 	 * 
